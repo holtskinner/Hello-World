@@ -16,12 +16,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMT-Bb-jMn">
+                                <rect key="frame" x="149" y="40" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqC-fr-aQ5">
+                                <rect key="frame" x="169.5" y="71" width="35" height="30"/>
+                                <state key="normal" title="Hello"/>
+                                <connections>
+                                    <action selector="helloTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NmQ-2F-l2E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ms-XK-qEB">
+                                <rect key="frame" x="169" y="111" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CHF-mf-pLg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oMT-Bb-jMn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CpS-rZ-6mX"/>
+                            <constraint firstItem="cqC-fr-aQ5" firstAttribute="top" secondItem="oMT-Bb-jMn" secondAttribute="bottom" constant="10" id="JdY-OI-PyK"/>
+                            <constraint firstItem="oMT-Bb-jMn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YbI-b8-r9O"/>
+                            <constraint firstItem="5ms-XK-qEB" firstAttribute="centerX" secondItem="cqC-fr-aQ5" secondAttribute="centerX" id="f9f-Wh-IwF"/>
+                            <constraint firstItem="cqC-fr-aQ5" firstAttribute="centerX" secondItem="oMT-Bb-jMn" secondAttribute="centerX" id="gQY-Gr-55H"/>
+                            <constraint firstItem="5ms-XK-qEB" firstAttribute="top" secondItem="cqC-fr-aQ5" secondAttribute="bottom" constant="10" id="h6d-SW-p2E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="oMT-Bb-jMn" id="6Za-62-K8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
